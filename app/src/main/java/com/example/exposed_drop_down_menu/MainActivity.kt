@@ -28,6 +28,10 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
             setAdapter(adapter)
             onItemClickListener = this@MainActivity
         }
+
+        mBinding.btnOpenFragment.setOnClickListener{
+            Toast.makeText(this, "BTN", Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onItemClick(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
@@ -36,8 +40,16 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
         //Toast.makeText(this, item, Toast.LENGTH_SHORT).show()
     }
 
+    /** Fragment Example
+    mBinding.autoCompleteTextView.onItemClickListener =
+    OnItemClickListener { parent, p1, position, p3 ->
+        val item  = parent?.getItemAtPosition(position).toString()
+        setDataInView(item)
+        Toast.makeText(requireContext(), "MSG", Toast.LENGTH_SHORT).show()
+    }
+     **/
+
     fun setDataInView(item: String){
         mBinding.tvCountry.text = item
     }
-
 }
