@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Exposed-Drop-Down-Menu</string>
+
+    <!-- Dropdown items -->
+    <string-array name="country_location">
+        <item>El Salvador</item>
+        <item>Guatemala</item>
+        <item>Honduras</item>
+        <item>Nicaragua</item>
+        <item>Pánama</item>
+        <item>Republica Dominicana</item>
+    </string-array>
 </resources>
